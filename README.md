@@ -1,6 +1,6 @@
 # CsvDecode
 
-**TODO: Add description**
+It's a CSV decoder for elixir language
 
 ## Installation
 
@@ -13,6 +13,28 @@ def deps do
     {:csv_decode, "~> 0.1.0"}
   ]
 end
+```
+
+
+# Use 
+
+Use the main function something like that
+
+```
+alias CsvDecode
+
+path = "./example_csv.csv"
+
+schema = %{
+  "Active" => :boolean,
+  "Phone" => :string,
+  "School" => :string,
+  "State" => :string,
+  "System ID" => :integer
+}
+
+CsvDecode.decode(path, schema)
+
 ```
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)

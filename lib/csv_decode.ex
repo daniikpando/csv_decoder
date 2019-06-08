@@ -109,4 +109,20 @@ defmodule CsvDecode do
 
   defp detect_row_type(0), do: :header
   defp detect_row_type(n) when n > 0, do: :value
+
+  # Execute example for test
+  @spec example :: any
+  def example do
+    path = "./example_csv.csv"
+
+    schema = %{
+      "Active" => :boolean,
+      "Phone" => :string,
+      "School" => :string,
+      "State" => :string,
+      "System ID" => :integer
+    }
+
+    CsvDecode.decode(path, schema)
+  end
 end
