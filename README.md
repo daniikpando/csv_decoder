@@ -20,7 +20,7 @@ end
 
 Use the main function something like that
 
-```
+```elixir
 alias CsvDecode
 
 path = "./example_csv.csv"
